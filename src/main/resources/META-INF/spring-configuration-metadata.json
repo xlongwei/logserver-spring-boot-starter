@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "name": "logserver",
+      "type": "com.xlongwei.logserver.LogserverProperties",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "logserver.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启logserver",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
+      "name": "logserver.port",
+      "type": "java.lang.Integer",
+      "description": "端口号，默认6000",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
+      "name": "logserver.queue-size",
+      "type": "java.lang.Integer",
+      "description": "默认10240，配置SocketAppender队列大小",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
+      "name": "logserver.reconnection-delay",
+      "type": "ch.qos.logback.core.util.Duration",
+      "description": "自动重试间隔，默认10秒",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
+      "name": "logserver.remote-host",
+      "type": "java.lang.String",
+      "description": "logserver域名或ip地址，默认\"logserver\"，需配合\/etc\/hosts使用",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    }
+  ],
+  "hints": []
+}
