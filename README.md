@@ -8,7 +8,7 @@ logserver-spring-boot-starter自动配置logback发送日志到[logserver](https
 <dependency>
     <groupId>com.xlongwei.logserver</groupId>
     <artifactId>logserver-spring-boot-starter</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 </dependency>
 ```
 
@@ -25,6 +25,13 @@ logserver:
   port: 6000 #默认端口6000
   queueSize: 10240 #默认队列大小10240，配置SocketAppender的队列大小
   reconnectionDelay: 10000 #默认重试间隔10秒
+  token: xlongwei #安全校验
+  remoteAddress: #默认http://logserver:9880，向logserver注册自己
+management: #需要依赖spring-boot-starter-actuator
+  endpoints:
+    web:
+      exposure:
+        include: logserver #开启LogserverEndpoint，让logserver变更日志级别
 ```
 
 ### jvm

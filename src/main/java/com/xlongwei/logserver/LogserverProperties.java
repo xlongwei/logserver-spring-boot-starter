@@ -33,6 +33,14 @@ public class LogserverProperties {
 	 * 自动重试间隔，默认10秒
 	 */
 	private Duration reconnectionDelay = new Duration(10000);
+	/**
+	 * 安全控制
+	 */
+	private String token = "xlongwei";
+	/**
+	 * 远程注册地址，默认：http://logserver:9880
+	 */
+	private String remoteAddress;
 	@Override
 	public String toString() {
 		return new StringBuilder("logserver[enabled=").append(enabled)
@@ -40,6 +48,7 @@ public class LogserverProperties {
 				.append(",port=").append(port)
 				.append(",queueSize=").append(queueSize)
 				.append(",reconnectionDelay=").append(reconnectionDelay)
+				.append(",remoteAddress=").append(remoteAddress)
 				.append("]").toString();
 	}
 	public boolean isEnabled() {
@@ -71,5 +80,17 @@ public class LogserverProperties {
 	}
 	public void setReconnectionDelay(Duration reconnectionDelay) {
 		this.reconnectionDelay = reconnectionDelay;
+	}
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
+	public String getRemoteAddress() {
+		return remoteAddress;
+	}
+	public void setRemoteAddress(String remoteAddress) {
+		this.remoteAddress = remoteAddress;
 	}
 }

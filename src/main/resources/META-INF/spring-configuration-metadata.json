@@ -4,6 +4,11 @@
       "name": "logserver",
       "type": "com.xlongwei.logserver.LogserverProperties",
       "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
+      "name": "management.endpoint.logserver",
+      "type": "com.xlongwei.logserver.LogserverEndpoint",
+      "sourceType": "com.xlongwei.logserver.LogserverEndpoint"
     }
   ],
   "properties": [
@@ -32,10 +37,29 @@
       "sourceType": "com.xlongwei.logserver.LogserverProperties"
     },
     {
+      "name": "logserver.remote-address",
+      "type": "java.lang.String",
+      "description": "远程注册地址，默认：http:\/\/logserver:9880",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
       "name": "logserver.remote-host",
       "type": "java.lang.String",
       "description": "logserver域名或ip地址，默认\"logserver\"，需配合\/etc\/hosts使用",
       "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
+      "name": "logserver.token",
+      "type": "java.lang.String",
+      "description": "安全控制",
+      "sourceType": "com.xlongwei.logserver.LogserverProperties"
+    },
+    {
+      "name": "management.endpoint.logserver.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to enable the logserver endpoint.",
+      "sourceType": "com.xlongwei.logserver.LogserverEndpoint",
+      "defaultValue": true
     }
   ],
   "hints": []
